@@ -1,0 +1,18 @@
+<Tela_Insert>
+      name: "tela_insert"
+
+      
+      Insert_Layout
+            BoxLayout:
+                  orientation: "vertical"
+                  size: root.width, root.height
+                  Label:
+                        id: resultado
+                        font_size: 28
+                        text: ""
+
+                  Button:
+                        text: "Voltar"
+                        font_size: 32
+                        on_release: 
+                              app.root.current = "principal"

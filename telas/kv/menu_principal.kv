@@ -1,0 +1,61 @@
+#:include kv/tela_insert.kv
+#:include kv/tela_consulta.kv
+#:include kv/tela_lista.kv
+#:include kv/tela_alterar.kv
+#:include kv/tela_excluir.kv
+
+
+Gerenciador_Telas:
+    Menu_Principal:
+    Tela_Insert:
+    Tela_Consulta:
+    Tela_Lista:
+    Tela_Alterar:
+    Tela_Excluir:
+    
+
+<Menu_Principal>
+    name: "menu"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            text: "CRUD - Funcionario"
+            font_size: 38
+            size_hint: (1, 0.25)
+        
+        GridLayout:
+            cols: 2
+            rows: 2
+            size_hint: (1, .5)
+
+            Label:
+                text: "Digite seu nome"
+                font_size: 28
+                size_hint:(1, 0.25)
+
+            TextInput:
+                id: nome
+                multiline: False
+
+            Label:
+                text: "Digite seu e-mail"
+                font_size: 28
+                size_hint:(1, 0.25)
+            
+            TextInput:
+                id: email
+                multiline: False
+        
+        Button:
+            text: "Enviar"
+            on_release: 
+                app.root.current = "segunda"
+            on_press: root.get_dados()
+
+
+
+
+
