@@ -1,15 +1,13 @@
-#:include kv/tela_insert.kv
-#:include kv/tela_consulta.kv
-#:include kv/tela_lista.kv
-#:include kv/tela_alterar.kv
-#:include kv/tela_excluir.kv
+#:include telas/kv/tela_insert.kv
+#:include telas/kv/tela_consulta.kv
+#:include telas/kv/tela_alterar.kv
+#:include telas/kv/tela_excluir.kv
 
 
 Gerenciador_Telas:
     Menu_Principal:
     Tela_Insert:
     Tela_Consulta:
-    Tela_Lista:
     Tela_Alterar:
     Tela_Excluir:
     
@@ -24,36 +22,40 @@ Gerenciador_Telas:
         Label:
             text: "CRUD - Funcionario"
             font_size: 38
-            size_hint: (1, 0.25)
+            size_hint: (1, 0.30)
         
-        GridLayout:
-            cols: 2
-            rows: 2
-            size_hint: (1, .5)
-
-            Label:
-                text: "Digite seu nome"
-                font_size: 28
-                size_hint:(1, 0.25)
-
-            TextInput:
-                id: nome
-                multiline: False
-
-            Label:
-                text: "Digite seu e-mail"
-                font_size: 28
-                size_hint:(1, 0.25)
-            
-            TextInput:
-                id: email
-                multiline: False
         
         Button:
-            text: "Enviar"
+            text: "Inserir Funcionario"
+            font_size: 32
+            size_hint: (1, .2)
             on_release: 
-                app.root.current = "segunda"
-            on_press: root.get_dados()
+                app.root.current = "tela_insert"
+                root.manager.transition.direction = "left"
+        
+        Button:
+            text: "Consultar Funcionario"
+            font_size: 32
+            size_hint: (1, .2)
+            on_release: 
+                app.root.current = "tela_insert"
+                root.manager.transition.direction = "left"
+        
+        Button:
+            text: "Alterar Funcionario"
+            font_size: 32
+            size_hint: (1, .2)
+            on_release: 
+                app.root.current = "tela_insert"
+                root.manager.transition.direction = "left"
+        
+        Button:
+            text: "Excluir Funcionario"
+            font_size: 32
+            size_hint: (1, .2)
+            on_release: 
+                app.root.current = "tela_insert"
+                root.manager.transition.direction = "left"
 
 
 

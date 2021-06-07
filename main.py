@@ -1,5 +1,3 @@
-import os, sys
-sys.path.insert(0, os.path.abspath(".."))
 
 import kivy
 
@@ -10,7 +8,10 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
 from kivy.core.window import Window
 
-import tela_insert
+import telas.tela_insert
+import telas.tela_consulta
+import telas.tela_alterar
+import telas.tela_excluir
 
 
 #App size
@@ -25,7 +26,7 @@ class Menu_Principal(Screen):
 class Gerenciador_Telas(ScreenManager):
       pass
 
-kv = Builder.load_file('kv/menu_principal.kv')
+kv = Builder.load_file('telas/kv/menu_principal.kv')
 
 class CrudApp(App):
       def build(self):

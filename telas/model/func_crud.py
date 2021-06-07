@@ -41,5 +41,5 @@ class Func_Crud:
                   funcionario = Funcionario(res[0], str(res[1]), str(res[2]), str(res[3]), str(res[4]), res[5])
 
                   return funcionario
-            except:
-                  print('')
+            except Exception as err:
+                  print(err)
