@@ -5,11 +5,10 @@ from kivy.properties import ObjectProperty
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 
-class Insert_Layout(Widget):
-      pass
-            
-
+from telas.models.func_model import Funcionario
+from telas.models.func_crud import Func_Crud
 
 class Tela_Insert(Screen):
-      pass
+      def insert_func():
+            pass
 

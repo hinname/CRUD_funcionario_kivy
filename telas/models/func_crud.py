@@ -1,5 +1,5 @@
-from conexaoDB import Conexaodb
-from func_model import Funcionario
+from telas.models.conexaoDB import Conexaodb
+from telas.models.func_model import Funcionario
 
 class Func_Crud:
       

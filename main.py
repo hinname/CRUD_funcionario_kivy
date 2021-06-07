@@ -15,7 +15,7 @@ import telas.tela_excluir
 
 
 #App size
-Window.size = (800, 800)
+Window.size = (600, 800)
 
 
 class Menu_Principal(Screen):
