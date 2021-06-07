@@ -1,3 +1,6 @@
+import os, sys
+sys.path.insert(0, os.path.abspath(".."))
+
 import kivy
 
 from kivy.app import App
@@ -7,6 +10,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
 from kivy.core.window import Window
 
+import tela_insert
 
 
 #App size

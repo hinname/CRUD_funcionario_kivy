@@ -1,4 +1,5 @@
-from db.conexaoDB import Conexaodb
+
+from conexaoDB import Conexaodb
 from func_model import Funcionario
 
 class Func_Crud:
@@ -38,4 +39,7 @@ class Func_Crud:
                   cursor.execute(sql)
                   res = cursor.fetchone()
                   funcionario = Funcionario(res[0], str(res[1]), str(res[2]), str(res[3]), str(res[4]), res[5])
+
                   return funcionario
+            except:
+                  print('')
