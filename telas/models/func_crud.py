@@ -1,4 +1,3 @@
-
 from conexaoDB import Conexaodb
 from func_model import Funcionario
 
