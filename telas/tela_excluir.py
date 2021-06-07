@@ -6,4 +6,5 @@ from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 
 class Tela_Excluir(Screen):
-      pass
+      def excluir_func():
+            pass
