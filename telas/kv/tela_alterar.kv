@@ -73,10 +73,18 @@
                   size_hint: (1, .10)
 
             Button:
+                  id: selecionar_button
+                  text: "Selecionar Funcionario"
+                  font_size: 28
+                  size_hint: (1, .10)
+
+
+            Button:
                   id: alterar_button
                   text: "Alterar funcionário"
                   font_size: 28
                   size_hint: (1, .10)
+                  disabled: True
                   on_release: 
                         root.alterar_func()
 

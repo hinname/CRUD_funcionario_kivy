@@ -6,5 +6,5 @@ from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 
 class Tela_Alterar(Screen):
-      def alterar_func():
+      def alterar_func(self):
             pass
