@@ -13,6 +13,16 @@ class Func_Crud:
             resp = Conexaodb.executar_sql(Conexaodb, sql, valores)
             if resp:
                   return True
+            #try:
+                  #sql = "INSERT INTO funcionarios(nome, cpf, telefone, email, salario) \
+                  #VALUES('{}', '{}', '{}', '{}', {});".format(func.nome, func.cpf, func.telefone, func.email, func.salario)
+                  #print(self._con)
+                  #cursor = self._con.cursor()
+                  #cursor.execute(sql)
+                  #self._con.commit()
+                  #return True
+            #except Exception as e:
+                  #print(e)
 
       def atualizarFuncionario(self, func):
             #Atualiza um funcionario ao banco de dados

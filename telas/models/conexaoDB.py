@@ -13,7 +13,7 @@ class Conexaodb:
                   try:
                         Conexaodb._conn = mysql.connector.connect(
                               host=Conexaodb._host,
-                              database=Conexaodb._bd,
+                              database=Conexaodb._db,
                               user=Conexaodb._user,
                               password=Conexaodb._password
                         )

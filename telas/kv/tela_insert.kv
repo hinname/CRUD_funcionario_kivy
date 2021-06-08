@@ -78,6 +78,8 @@
                   text: "Voltar para menu principal"
                   font_size: 28
                   size_hint: (1, .15)
-                  on_release: 
+                  on_press:
+                        root.clear_fields()
+                  on_release:
                         app.root.current = "menu"
                         root.manager.transition.direction = "right"
