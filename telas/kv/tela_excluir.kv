@@ -53,12 +53,20 @@
                   font_size: 25
                   size_hint: (1, .10)
                   halign: 'center'
+            
+            Label:
+                  id: resposta
+                  text: "Aguardando..."
+                  font_size: 28
+                  size_hint: (1, .10)
 
             Button:
                   id: selecionar_button
                   text: "Selecionar Funcionario"
                   font_size: 28
                   size_hint: (1, .10)
+                  on_release: 
+                        root.consulta_func()
 
 
             Button:
@@ -77,3 +85,4 @@
                   on_release: 
                         app.root.current = "menu"
                         root.manager.transition.direction = "right"
+                        root.clear_fields()

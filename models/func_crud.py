@@ -1,5 +1,5 @@
-from telas.models.conexaoDB import Conexaodb
-from telas.models.func_model import Funcionario
+from models.conexaoDB import Conexaodb
+from models.func_model import Funcionario
 
 class Func_Crud:
       
@@ -35,10 +35,18 @@ class Func_Crud:
       def excluirFuncionario(self, var_id):
             #Deleta um funcionario ao banco de dados
             #id string
-            sql = "DELETE FROM funcionarios WHERE id=?;"
-            resp = Conexaodb.executar_sql(Conexaodb, sql, var_id)
-            if resp:
+            #sql = "DELETE FROM funcionarios WHERE id=?;"
+            #resp = Conexaodb.executar_sql(Conexaodb, sql, str(var_id))
+            #return resp == 1
+            try:
+                  sql = "DELETE FROM funcionarios WHERE id=" + var_id + ";"
+                  cursor = self._con.cursor()
+                  cursor.execute(sql)
+                  self._con.commit()
                   return True
+            except Exception as e:
+                  print(e)
+                  return False
       
       def buscarFuncionario(self, var_id):
             #buscar funcionario pelo id
@@ -47,7 +55,7 @@ class Func_Crud:
                   cursor = self._con.cursor()
                   cursor.execute(sql)
                   res = cursor.fetchone()
-                  funcionario = Funcionario(res[0], str(res[1]), str(res[2]), str(res[3]), str(res[4]), res[5])
+                  funcionario = Funcionario(res[0], res[1], res[2], res[3], res[4], res[5])
 
                   return funcionario
             except Exception as err:

@@ -8,7 +8,7 @@ class Funcionario:
             '_salario'
       )
 
-      def __init__(self, var_id=None, nome='', cpf='', telefone='', email='', salario=0.0):
+      def __init__(self, var_id=0, nome='', cpf='', telefone='', email='', salario=0.0):
             self.id = var_id
             self.nome = nome
             self.cpf = cpf

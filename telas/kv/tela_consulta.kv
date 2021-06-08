@@ -21,30 +21,35 @@
                   halign: 'center'
 
             Label:
-                  text: 'Nome'
+                  id: label_nome
+                  text: 'Nome: '
                   font_size: 25
                   size_hint: (1, .10)
                   halign: 'center'
 
             Label:
+                  id: label_cpf
                   text: 'CPF'
                   font_size: 25
                   size_hint: (1, .10)
                   halign: 'center'
 
             Label:
+                  id: label_tel
                   text: 'Telefone'
                   font_size: 25
                   size_hint: (1, .10)
                   halign: 'center'
 
             Label:
+                  id: label_email
                   text: 'E-mail'
                   font_size: 25
                   size_hint: (1, .10)
                   halign: 'center'
 
             Label:
+                  id: label_salario
                   text: 'Salario'
                   font_size: 25
                   size_hint: (1, .10)
@@ -71,3 +76,4 @@
                   on_release: 
                         app.root.current = "menu"
                         root.manager.transition.direction = "right"
+                        root.clear_fields()

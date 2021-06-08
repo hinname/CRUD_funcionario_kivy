@@ -5,8 +5,8 @@ from kivy.properties import ObjectProperty
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 
-from telas.models.func_model import Funcionario
-from telas.models.func_crud import Func_Crud
+from models.func_model import Funcionario
+from models.func_crud import Func_Crud
 
 class Tela_Insert(Screen):
       def clear_fields(self):
@@ -26,7 +26,7 @@ class Tela_Insert(Screen):
 
             crud = Func_Crud()
 
-            funcionario = Funcionario(None, nome, cpf, telefone, email, float(salario))
+            funcionario = Funcionario(0, nome, cpf, telefone, email, float(salario))
 
             if crud.inserirFuncionario(funcionario):
                   self.ids.resposta.text = "Usuário inserido com sucesso!"
