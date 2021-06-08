@@ -1,12 +1,89 @@
 <Tela_Alterar>
       name: "tela_alterar"
 
-      
+      BoxLayout:
+            orientation: "vertical"
+            size: root.width, root.height
 
-      Button:
-            text: "Voltar para menu principal"
-            font_size: 28
-            size_hint: (1, .10)
-            on_release: 
-                  app.root.current = "menu"
-                  root.manager.transition.direction = "right"
+            Label:
+                  id: titulo_alterar
+                  font_size: 30
+                  size_hint: (1, .15)
+                  text: "Alterar Dados"
+
+            TextInput:
+                  id: input_ID
+                  font_size: 25
+                  size_hint:(1, .10)
+                  multiline: False
+                  hint_text: "ID"
+                  halign: 'center'
+
+            TextInput:
+                  id: input_nome
+                  font_size: 25
+                  size_hint:(1, .10)
+                  multiline: False
+                  hint_text: "Nome"
+                  halign: 'center'
+            
+            
+            TextInput:
+                  id: input_cpf
+                  font_size: 25
+                  size_hint:(1, .10)
+                  hint_text: "CPF"
+                  multiline: False
+                  input_filter: 'int'
+                  halign: 'center'
+            
+            
+            TextInput:
+                  id: input_tel
+                  font_size: 25
+                  size_hint:(1, .10)
+                  hint_text: "Telefone"
+                  multiline: False
+                  input_filter: 'int'
+                  halign: 'center'
+            
+
+            TextInput:
+                  id: input_email
+                  font_size: 25
+                  size_hint:(1, .10)
+                  hint_text: "E-mail"
+                  multiline: False
+                  halign: 'center'
+            
+            
+            TextInput:
+                  id: input_salario
+                  font_size: 25
+                  size_hint:(1, .10)
+                  hint_text: "Salario"
+                  multiline: False
+                  input_filter: 'float'
+                  halign: 'center'
+
+            Label:
+                  id: resposta
+                  text: "Aguardando..."
+                  font_size: 28
+                  size_hint: (1, .10)
+
+            Button:
+                  id: alterar_button
+                  text: "Alterar funcionário"
+                  font_size: 28
+                  size_hint: (1, .10)
+                  on_release: 
+                        root.alterar_func()
+
+            Button:
+                  text: "Voltar para menu principal"
+                  font_size: 28
+                  size_hint: (1, .10)
+                  on_release: 
+                        app.root.current = "menu"
+                        root.manager.transition.direction = "right"

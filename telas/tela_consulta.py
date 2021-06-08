@@ -6,4 +6,5 @@ from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 
 class Tela_Consulta(Screen):
-      pass
+      def consulta_func():
+            pass
