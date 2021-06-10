@@ -17,6 +17,7 @@ class Tela_Alterar(Screen):
             self.ids.input_salario.text = ""
 
             self.ids.resposta.text = "Aguardando..."
+            self.ids.alterar_button.disabled = True
 
       def consulta_func(self):
             var_id = self.ids.input_ID.text
@@ -41,4 +42,21 @@ class Tela_Alterar(Screen):
                   self.ids.resposta.text = str(err)
 
       def alterar_func(self):
-            pass
+            var_id = self.ids.input_ID.text
+
+            nome = self.ids.input_nome.text 
+            cpf = self.ids.input_cpf.text 
+            telefone = self.ids.input_tel.text 
+            email = self.ids.input_email.text 
+            salario = self.ids.input_salario.text
+
+            crud = Func_Crud()
+
+            funcionario = Funcionario(var_id, nome, cpf, telefone, email, float(salario))
+
+            if crud.atualizarFuncionario(funcionario):
+                  self.clear_fields()
+                  self.ids.resposta.text = "Usuário alterado com sucesso!"
+                  return
+            
+            self.ids.resposta.text = "Erro ao alterar funcionário"

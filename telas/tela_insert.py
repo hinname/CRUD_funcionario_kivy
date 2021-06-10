@@ -17,7 +17,7 @@ class Tela_Insert(Screen):
             self.ids.input_salario.text = ""
 
       def insert_func(self):
-            resp = self.ids.resposta.text
+            
             nome = self.ids.input_nome.text
             cpf = self.ids.input_cpf.text
             telefone = self.ids.input_tel.text
